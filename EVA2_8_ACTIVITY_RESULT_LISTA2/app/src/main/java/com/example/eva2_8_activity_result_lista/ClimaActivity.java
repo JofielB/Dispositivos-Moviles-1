@@ -2,6 +2,8 @@ package com.example.eva2_8_activity_result_lista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,10 +21,13 @@ public class ClimaActivity extends AppCompatActivity  implements ListView.OnItem
             new Clima(R.drawable.tornado,12,"Ciudad 7","Tornado"),
     };
     ListView listaClima;
+    Intent intWeather;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clima);
+        intWeather = new Intent(this,MainActivity.class);
+
         listaClima = findViewById(R.id.listaClima);
         listaClima.setAdapter(new ClimaAdapter(this,
                 R.layout.layout_clima,cCiudades));
@@ -30,6 +35,10 @@ public class ClimaActivity extends AppCompatActivity  implements ListView.OnItem
     }
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(this,cCiudades[i].getCiudad(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this,cCiudades[i].getCiudad(),Toast.LENGTH_SHORT).show();
+        String ciudad = cCiudades[i].getCiudad();
+        intWeather.putExtra("MENSAJE",""+ciudad);
+        setResult(Activity.RESULT_OK,intWeather);
+        finish();
     }
 }
