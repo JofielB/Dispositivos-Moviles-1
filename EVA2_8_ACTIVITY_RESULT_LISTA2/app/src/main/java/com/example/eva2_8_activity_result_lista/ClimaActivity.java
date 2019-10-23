@@ -36,8 +36,15 @@ public class ClimaActivity extends AppCompatActivity  implements ListView.OnItem
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         //Toast.makeText(this,cCiudades[i].getCiudad(),Toast.LENGTH_SHORT).show();
+
+        //int imagen, double temperatura, String ciudad, String clima
+
         String ciudad = cCiudades[i].getCiudad();
         intWeather.putExtra("MENSAJE",""+ciudad);
+        intWeather.putExtra("IMG",""+cCiudades[i].getImagen());
+        intWeather.putExtra("TEMP",""+cCiudades[i].getTemperatura());
+        intWeather.putExtra("CITY",""+cCiudades[i].getCiudad());
+        intWeather.putExtra("WEATHER",""+cCiudades[i].getClima());
         setResult(Activity.RESULT_OK,intWeather);
         finish();
     }
