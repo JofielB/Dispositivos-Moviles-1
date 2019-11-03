@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.MenuItem;
 import android.view.Window;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PrincipalMenu extends AppCompatActivity {
 
@@ -52,7 +53,8 @@ public class PrincipalMenu extends AppCompatActivity {
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                new GardenFragment()).commit();
+                new ProfileFragment()).commit();
+
     }
 
 }

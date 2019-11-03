@@ -79,7 +79,7 @@
             app:layout_constraintEnd_toEndOf="@+id/imageView6" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/edTxtPlanName"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -95,7 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
         <EditText
-            android:id="@+id/editText5"
+            android:id="@+id/edTxtDesc"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -108,7 +108,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText4" />
+            app:layout_constraintTop_toBottomOf="@+id/edTxtPlanName" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -220,7 +220,7 @@
         android:layout_marginTop="20dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnAdd"
             style="@style/button"
             android:layout_width="173dp"
             android:layout_height="46dp"

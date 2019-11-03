@@ -2,26 +2,67 @@ package com.example.kipo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import java.util.Random;
 
 public class AddPlant extends AppCompatActivity implements View.OnClickListener {
     Button btnBack;
+    Button btnAdd;
     Button b1,b2,b3,b4,b5,b6;
+    EditText txtName;
+    EditText txtDesc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
         setContentView(R.layout.activity_add_plant);
+        txtName = findViewById(R.id.edTxtPlanName);
+        txtDesc = findViewById(R.id.edTxtDesc);
         asignarBotones();
         btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+            }
+        });
+
+        btnAdd = findViewById(R.id.btnAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random r = new Random();
+                int random = r.nextInt((2 - 0) + 1) + 0;
+                int imgChooseRandom;
+                switch (random){
+                    case 0:
+                        imgChooseRandom = R.drawable.plantaa;
+                        break;
+                    case 1:
+                        imgChooseRandom = R.drawable.plantaaa;
+                        break;
+                    case 2:
+                        imgChooseRandom = R.drawable.cactus;
+                        break;
+                    default:
+                        imgChooseRandom = R.drawable.plant;
+                        break;
+                }
+                Intent intent = getIntent();
+                intent.putExtra("IMG",imgChooseRandom);
+                intent.putExtra("IMGD",R.drawable.planthappy);
+                intent.putExtra("NAME",txtName.getText().toString());
+                intent.putExtra("DESC",txtDesc.getText().toString());
+                setResult(Activity.RESULT_OK,intent);
                 finish();
             }
         });
