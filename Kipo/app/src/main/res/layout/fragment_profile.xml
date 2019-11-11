@@ -40,7 +40,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="64dp"
         android:lineSpacingExtra="7sp"
-        android:text="Current plants: 2"
+        android:text="Current plants: 0"
         android:textColor="#ad000000"
         android:textSize="24sp" />
 

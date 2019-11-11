@@ -48,7 +48,7 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edTxtUserName"
         android:layout_width="301dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edTxtUserPass"
         android:layout_width="301dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edTxtUserName" />
 
     <TextView
         android:id="@+id/textView4"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edTxtUserPass" />
 
     <Button
         android:id="@+id/btnLogin"
