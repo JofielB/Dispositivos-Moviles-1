@@ -9,12 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register"></activity>
-        <activity android:name=".AddPlant" />
+        <activity android:name=".Register"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".AddPlant"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PrincipalMenu"
-            android:label="@string/title_activity_principal_menu" />
-        <activity android:name=".MainActivity">
+            android:label="@string/title_activity_principal_menu"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

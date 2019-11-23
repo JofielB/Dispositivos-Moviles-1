@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/edTxtUserPass"
+        android:id="@+id/edTxtUserPassR"
         android:layout_width="301dp"
         android:layout_height="42dp"
         android:layout_marginStart="8dp"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edTxtUserName" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/txtForgotPass"
         android:layout_width="296dp"
         android:layout_height="17dp"
         android:layout_marginStart="8dp"
@@ -87,7 +87,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edTxtUserPass" />
+        app:layout_constraintTop_toBottomOf="@+id/edTxtUserPassR" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -100,9 +100,10 @@
         android:text="LOG IN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/txtForgotPass" />
 
     <TextView
+        android:id="@+id/txtCreateUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"

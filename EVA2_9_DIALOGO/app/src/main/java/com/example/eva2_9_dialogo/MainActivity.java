@@ -14,6 +14,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     Button botonDef;
     Button botonEdt;
+    Dialog dialog;
+    EditText editText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,18 +53,17 @@ public class MainActivity extends AppCompatActivity {
          botonEdt.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 final Dialog dialog = new Dialog(MainActivity.this);
+
+                 dialog = new Dialog(MainActivity.this);
                  dialog.setContentView(R.layout.layout_dialog);
-                 final EditText editText;
                  Button btnOk;
                  editText = dialog.findViewById(R.id.edTxt);
                  btnOk = dialog.findViewById(R.id.btnOk);
-
                  btnOk.setOnClickListener(new View.OnClickListener() {
                      @Override
                      public void onClick(View view) {
                          String sCade = editText.getText().toString();
-                         Toast.makeText(getApplicationContext(),sCade,Toast.LENGTH_SHORT).show();
+                         Toast.makeText(MainActivity.this,sCade,Toast.LENGTH_SHORT).show();
                          dialog.dismiss();
                      }
                  });
