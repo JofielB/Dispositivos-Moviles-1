@@ -167,14 +167,14 @@ public class Reproductor extends AppCompatActivity {
     ServiceConnection mConnection = new ServiceConnection() {
         @Override
         public void onServiceDisconnected(ComponentName name) {
-            Toast.makeText(Reproductor.this, "Service is disconnected", 1000).show();
+            //Toast.makeText(Reproductor.this, "Service is disconnected", 1000).show();
             mBounded = false;
             mServer = null;
         }
 
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            Toast.makeText(Reproductor.this, "Service is connected", 1000).show();
+            //Toast.makeText(Reproductor.this, "Service is connected", 1000).show();
             mBounded = true;
             MyService.LocalBinder mLocalBinder = (MyService.LocalBinder)service;
             mServer = mLocalBinder.getServerInstance();
